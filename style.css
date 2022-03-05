@@ -1,0 +1,104 @@
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f1f1;
+    background: url('https://source.unsplash.com/1600x900/?landscape');
+    height: 100vh;
+}
+
+.container {
+    width: 800px;
+    height: 600px;
+    background: #000000d0;
+    display: grid;
+    grid-template: 100px 300px 100px 100px / repeat(8, 100px);
+    margin: 100px auto 0;
+    position: relative;
+    border: 1px solid #f1f1f1;
+}
+
+.heure-bloc-prevision {
+    grid-area: 4 / 1 / 5 / -1;
+}
+
+.jour-prevision-bloc,
+.heure-bloc-prevision {
+    display: grid;
+    grid-template: 100px / repeat(7, 1fr);
+}
+
+.bloc-h {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid #f1f1f1;
+    font-size: 21px;
+}
+
+.bloc-h:not(:last-child) {
+    border-right: 1px solid #f1f1f1;
+}
+
+.bloc-h p {
+    margin: 5px;
+}
+
+::placeholder {
+    color: #d4d4d4;
+}
+
+.btn {
+    padding: 10px 30px;
+    margin: 10px 0px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.showData {
+    margin: 80px 0px;
+    line-height: 1.6;
+}
+
+.showData ul {
+    list-style-type: none;
+}
+
+.showData .city {
+    font-size: 5rem;
+}
+
+.showData .temp {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.showData .desc {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
