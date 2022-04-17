@@ -1,0 +1,44 @@
+<?php
+require('connect.php');
+$dsn='mysql:dbname='.base.';host='server;
+try{
+$con=new PDO($dsn,user,passswd);
+}
+catch(PDOExeption $e){
+print('echec de connexion',$e->getMessage());
+exit();
+}
+class managerjoueur {
+  private $con;
+  public function __construct($con){
+    $this->setDb($con);
+  }
+public function ajouterjoueur (joueur $jou)
+$q=$this->con->prepare('insert into joueur(nom,prenom)values(:nom,:prenom)');
+$q->bindvalue(':nom',$jou->getnom());
+$q->bindvalue(':prenom',$jou->getprenom());
+$q->execute();
+
+public function setDB(PDO $con) (){
+$this->con=$con;}
+
+public function modifierjoueur(joueur $jou ){
+  $q=$this->con->prepare('update joueur set $this->nom=:nom ,$this->prenom=:prenom where $this->nom='jack'   ');
+  $q->bindvalue(':nom',$jou->getnom());
+  $q->bindvalue(':prenom',$jou->getprenom());
+  $q->execute();
+}
+public function supprimerjoueur(joueur $jou){
+  $q=$this->con->prepare('delete from joueur where $this->nom=:nom AND $this->prenom=:prenom  ');
+$q->bindvalue(':nom',$jou->getnom());
+$q->bindvalue(':prenom',$jou->getprenom());
+$q->execute();
+}
+public function selectionnerjoueur(joueur $jou){
+  $q=$this->con->prepare('select * from joueur where $this->nom=:nom AND $this->prenom=:prenom ');
+  $q->bindvalue(':nom',$jou->getnom());
+  $q->bindvalue(':prenom',$jou->getprenom());
+  $q->execute();
+}
+}
+?>
