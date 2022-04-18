@@ -1,0 +1,25 @@
+<! DOCTYPE html>
+<html
+lang=" en ">
+<head>
+<title>Exercice l</title>
+</head>
+<body>
+<fieldset>
+<center>
+<hl>Exercice 1</hl>
+<button onclick="CreateP( ) ">Creer
+une personne</button>
+<button onclick="Show(0">Afficher les personnes</button>
+<button onclick="CreateJ( ) ">Creer un joueur</button>
+<button onclick="ShowJoueur( ) ">Afficher les joueurs</button>
+<button onclick="CreateA( ) ">Creer un adversaire</button>
+<button onclick="ShowAd( )">Afficher les adversaires</button>
+<article id="result"></article>
+</center>
+</fieldset>
+<Script src="main. js"></script>
+</body>
+</html>
+Modifier
+Plus
